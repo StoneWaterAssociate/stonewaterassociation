@@ -43,14 +43,15 @@ const HomePage = () => {
 
       <h2
         style={{
-          fontSize: '22px',
+          fontSize: '70px',
           color: '#555',
           marginBottom: '20px',
           fontWeight: '900',
           wordBreak: 'break-word',
+          marginTop: '-40px',
         }}
       >
-        We're Working on Something Exciting
+        We're Working on <br/> Something Exciting
       </h2>
 
       <p
