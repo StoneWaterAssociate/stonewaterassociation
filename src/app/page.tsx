@@ -1,23 +1,71 @@
-import React from 'react';
 import Image from 'next/image';
-import styles from './page.module.css';
+import logo from '../../public/logo.png';  
+import styles from './styles/HomePage.module.css';
 
-const Home: React.FC = () => {
+const HomePage = () => {
   return (
-    <div className={styles.container}>
-      <Image 
-        src="/under-construction.png" 
-        alt="Under Construction" 
-        width={900} 
-        height={300} 
-        className={styles.image} 
-      />
-      <h1 className={styles.title}>Site Under Construction</h1>
-      <p className={styles.description}>
-        We’re working hard to bring you an amazing experience. Stay tuned!
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        textAlign: 'center',
+        fontFamily: 'Arial, sans-serif',
+        backgroundColor: '#f9f9f9',
+        padding: '20px',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          marginBottom: '20px',
+          position: 'relative',
+          padding: '15px',
+        }}
+      >
+        <div className={styles.circle} />
+        <Image src={logo} alt="StoneWaterAssociate Logo" width={90} height={60} />
+        <h1
+          style={{
+            marginLeft: '10px',
+            fontSize: '32px',
+            color: '#333',
+            fontWeight: '500',
+            wordBreak: 'break-word',
+          }}
+        >
+          StoneWaterAssociate
+        </h1>
+      </div>
+
+      <h2
+        style={{
+          fontSize: '22px',
+          color: '#555',
+          marginBottom: '20px',
+          fontWeight: '900',
+          wordBreak: 'break-word',
+        }}
+      >
+        We're Working on Something Exciting
+      </h2>
+
+      <p
+        style={{
+          fontSize: '18px',
+          color: '#666',
+          maxWidth: '600px',
+          lineHeight: '1.5',
+          fontWeight: '900',
+        }}
+      >
+        The StoneWaterAssociate web portal is currently under construction.
       </p>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
